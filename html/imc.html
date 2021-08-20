@@ -1,0 +1,80 @@
+<meta charset ="UTF-8">
+
+<script>
+
+    // Função usada para pular (n) linhas.
+    function pulaLinha(n){
+
+        for(let index = 1; index <= n; index ++ ){
+          document.write("<br><hr>"); // TAG <hr> inclui uma quebra de linha ipressa na tela.    
+        }        
+    }
+
+    // Função imprime mensagem na tela
+    function imprime(frase){
+        document.write("<big>" + frase + "</big>");
+        pulaLinha(1);
+    }
+
+
+    //Função imprime título.
+    function imprimeTitulo(titulo){
+      imprime("<h1>" + titulo + "</h1>")     
+    }
+
+
+    //Função imprime paragrafo
+    function imprimeParagrafo(paragrafo){
+        imprime("<p>" + paragrafo + "</p>")     
+    }
+   
+    // Função calcula IMC.
+    function calculaImc(peso,altura){
+      return  Math.round(peso / (altura * altura));
+    
+    }
+
+    //Função verifica IMC
+    function verificaIMC(imc){  
+
+        if (imc < 18.5 ) {
+            return ("Peso abaixo do ideal!");
+        }
+
+        if (imc <= 24.9){
+            return ("Peso normal!");
+        }
+
+        if (imc <= 29.9){
+            return ("Sobrepeso!");
+        }
+
+        if (imc <= 34.9){
+            return ("Obesidade grau I");
+        }
+
+        if (imc <= 39.9){
+            return ("Obesidade grau II (severa)");
+        }
+
+        if (imc > 39.9){
+            return ("Obesidade grau III (mórbida)");
+        }
+        
+    }
+
+
+    // Prompt solicita entrada ao usuario
+    let nome = prompt("Informe seu nome");
+    let altura = prompt(nome + " Informe sua altura");
+    let peso = prompt(nome +  " Informe seu peso");
+    
+    // Calcula IMC usando function calculaImc
+    let imcAtual = calculaImc(peso,altura);
+
+
+    imprimeTitulo("Cálculo IMC"); 
+    imprime(nome + " o seu IMC é : " + imcAtual);
+    imprime("Atualmente você está com " + verificaIMC(imcAtual));
+
+</script>

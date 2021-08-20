@@ -1,0 +1,60 @@
+
+<h1><u><i>Desenhando com Canvas</i></u></h1>
+<canvas id="canvas" width="601" height="401"></canvas>
+<br><br><b>Cor do pincel</b> <input id="Pallet" type="color">
+&ensp;<b>Tamanho</b><input type="range" id="size" name="size" min="1" max="100" value="20">
+&ensp;<input type="reset" id="reset" value="Limpa Tela">
+
+<script>
+
+    var canvas = document.getElementById('canvas');
+    var pallet = document.getElementById('Pallet')
+    var reset = document.getElementById('reset');
+    var size = document.getElementById('size');
+    var brush = canvas.getContext('2d');
+    var draw = false;
+
+
+
+    // Function exibe area do canvas na tela.
+    function showCanvas(color) {
+        
+        brush.fillStyle = 'ivory'; // Tela
+        brush.fillRect (0, 0, 600, 400);
+
+        brush.strokeStyle='black';// Borda
+        brush.strokeRect(0, 0, 600, 400);
+    }
+
+
+
+    //Function desenha na tela.
+    function drawCircle(event) {
+
+        if(draw) {
+
+            var x = event.pageX - canvas.offsetLeft;
+            var y = event.pageY - canvas.offsetTop;
+
+            brush.fillStyle = pallet.value;
+            brush.beginPath();
+            brush.arc(x, y, size.value, 0, 2 * Math.PI);
+            brush.fill();
+            
+        }
+
+    }
+   
+    //Arrow function para ativar variavel Draw
+    canvas.onmousedown = () => draw = true;
+
+    //Arrow function para desativar variavel Draw
+    canvas.onmouseup = () => draw = false;
+
+    //Mostra canvas na tela e limpa tela ao pressionar reset.
+    showCanvas('ivory');
+    reset.onclick = () => showCanvas('ivory');
+
+    canvas.onmousemove = drawCircle;
+
+</script>

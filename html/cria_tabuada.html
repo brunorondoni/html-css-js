@@ -1,0 +1,31 @@
+<meta chatset ="UTF-8">
+
+  <script>
+ 	
+ 	let tabuadaN = 1;
+
+   	for(let index = 1; index <= 10; index ++){
+        
+        tabuadaN = tabuada(index);
+        document.write(tabuadaN + "<br>")
+          ;
+
+  		//document.write("<br>" + tabuada(index) + "<br>");
+
+  	}
+    
+
+
+    // Função que cria uma tabuada n até 10
+    function tabuada (n){
+
+        for (let index = 1; index <= 10; index ++) {
+    	 document.write( n + " X " + index + " = " + n * index + "<br>");
+        }
+
+      return("Esta foi a tabuada do : " + n + "<br>");	
+    }	
+
+ </script>
+
+

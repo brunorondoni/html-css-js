@@ -1,0 +1,57 @@
+<meta charset="UTF-8">
+  <script>
+  
+  // Função usada para pular (n) linhas.
+    function pulaLinha(n){
+
+        for(let index = 1; index <= n; index ++ ){
+          document.write("<br><hr>"); // TAG <hr> inclui uma quebra de linha ipressa na tela.    
+        }        
+    }
+
+  // Função imprime mensagem na tela
+    function imprime(frase){
+        document.write("<big>" + frase + "</big>");
+        pulaLinha(1);
+    }
+
+
+  //Função imprime título.
+    function imprimeTitulo(titulo){
+      imprime("<h1><i><u>" + titulo + "</i></u></h1>")     
+    }
+
+
+  //Função imprime paragrafo
+    function imprimeParagrafo(paragrafo){
+        imprime("<p>" + paragrafo + "</p>")     
+    }
+
+
+  //Função solicita um número inteiro  
+   function solicitaInt(texto){
+      let entrada;
+      entrada = parseInt(prompt(texto)); 
+
+      while (isNaN(entrada)){
+      entrada = parseInt(prompt(texto));         
+      }
+    return entrada;
+   }
+ 
+
+
+ imprimeTitulo("Tabuada");
+ let multiplicador = solicitaInt("Entre com o multiplicador");
+ let multiplicando = 1;
+
+
+  do {
+
+   imprime(multiplicador + " X " + multiplicando + " = " + (multiplicador * multiplicando) );
+   multiplicando++;
+
+  } while (multiplicando <= 10)
+
+ imprime("Fim!");
+ </script>

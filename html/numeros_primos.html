@@ -1,0 +1,41 @@
+<meta charset ="UTF-8">
+
+  <h1>Numeros Primos</h1>
+
+    <script>
+
+    	 var n = 10;
+    	 var verificaPrimos = [];
+    	 var numerosPrimos = [];
+
+    	document.write( n + ' ' + numerosPrimos + "<br>" );
+
+    	encontraNumerosPrimos(n);
+
+
+
+        
+        function encontraNumerosPrimos(n){
+
+
+         for ( let index = 2; index <= n; index ++){
+         
+           verificaPrimos.push(index) 
+           
+         }
+
+
+          for ( let index = 0; index < verificaPrimos.length; index ++){
+
+          	if(verificaPrimos[index] % index == 0){
+          		document.write(verificaPrimos[index]);
+          	}
+
+          }
+
+          document.write("<br>" + verificaPrimos);
+        }
+
+
+    </script>
+

@@ -1,0 +1,119 @@
+<h1><u>Desenhando com canvas</u></h1>
+<canvas id="tela" width="600" height="400"></canvas>
+<br>Utilize o Botão direito do mouse para trocar a cor.
+<br>Utilize o Shift para aumentar o tamanho e Alt para diminuir.
+ 
+ <script> 
+
+ var canvas = document.getElementById('tela')
+ var ctx = canvas.getContext('2d');
+ var circleColors = ['blue','red','green','yellow','purple'];
+ var colorsIndex = 0;
+ var raio = 10; 
+ var draw = false;
+
+    // Function mostra canvas
+    function showCanvas(cor) {
+
+        ctx.fillStyle = cor;
+        ctx.fillRect (0, 0, 600, 400);
+        ctx.filStroke = 'black';
+        ctx.strokeRect(0, 0, 600, 400)
+
+    }
+
+
+
+    // Function desenha circulo no LeftClick do mouse
+    function drawCircle(event) {
+
+        if(draw) {
+
+            console.log(draw);
+
+            var x = event.pageX - canvas.offsetLeft;
+            var y = event.pageY - canvas.offsetTop; 
+
+        
+            if(event.shiftKey && event.altKey) {
+            alert(' Somente uma tecla por vez! ')
+            }
+
+            if(event.shiftKey && raio <= 100) {
+            raio += 10;
+            }
+
+            if(event.altKey && raio  >= 10) {
+            raio -= 5;
+            }
+        
+            ctx.fillStyle = circleColors[colorsIndex];
+            ctx.beginPath();
+            ctx.arc(x, y, raio, 0 , 2 * Math.PI); 
+            ctx.fill();
+
+        }
+
+    }
+
+    function drawOneCircle(event){
+
+        var x = event.pageX - canvas.offsetLeft;
+        var y = event.pageY - canvas.offsetTop; 
+
+          if(event.shiftKey && event.altKey) {
+            alert(' Somente uma tecla por vez! ')
+            }
+
+            if(event.shiftKey && raio <= 100) {
+            raio += 10;
+            }
+
+            if(event.altKey && raio  >= 10) {
+            raio -= 5;
+            }
+
+        ctx.fillStyle = circleColors[colorsIndex];
+        ctx.beginPath();
+        ctx.arc(x, y, raio, 0 , 2 * Math.PI); 
+        ctx.fill();
+    }
+
+
+
+    //Function  desenhar
+        function letsDraw() {
+        draw = true;
+    }
+
+
+
+    //Function parar de desenhar
+    function stopDraw() {
+        draw = false;
+    }
+
+
+
+    // Function muda cor dos circulos no RightClick do mouse
+    function changeColor() {       
+
+        console.log(colorsIndex);
+        colorsIndex++;
+        
+
+        if(colorsIndex >= circleColors.length) {
+            colorsIndex = 0;
+        }
+
+        return false;
+    }
+
+    showCanvas('ivory');
+    canvas.onmousedown = letsDraw;
+    canvas.onmouseup = stopDraw;
+    canvas.onclick = drawOneCircle;
+    canvas.onmousemove = drawCircle;
+    canvas.oncontextmenu = changeColor;
+
+ </script>

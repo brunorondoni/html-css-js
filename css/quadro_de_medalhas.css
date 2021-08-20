@@ -1,0 +1,45 @@
+html, body, main, footer, article, div, span, p, a, figure, small{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    outline: none;
+}
+
+img{
+    height: 45px;
+}
+
+.container{}
+
+
+
+.linha{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.coluna{
+       
+}
+
+/*BODY*/
+body{
+
+}
+
+
+
+/* HEADER */
+header{
+
+}
+
+
+
+/* MAIN */
+main{
+    
+}

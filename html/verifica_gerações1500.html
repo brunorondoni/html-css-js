@@ -1,0 +1,43 @@
+<meta charset ="UTF-8">
+
+<script>
+
+// Função usada para pular (n) linhas.
+    function pulaLinha(n){
+
+        for(let index = 1; index <= n; index ++ ){
+          document.write("<br>");    
+        }
+        
+    }
+
+    // Função imprime mensagem na tela
+    function imprime(frase){
+        document.write(frase);
+        pulaLinha(1);
+
+    }
+
+    //Função imprime título.
+    function imprimeTitulo(titulo){
+        imprime("<h1>" + titulo + "</h1>")
+        
+    }
+    //Função imprime paragrafo
+    function imprimeParagrafo(paragrafo){
+        imprime("<p>" + paragrafo + "</p>")
+        
+    }
+
+
+    let anoDescobrimento = 1500;
+    let anoAtual = 2021;
+    let anosPassados =  anoAtual - anoDescobrimento;
+    let gerações =  Math.floor(anosPassados / 28); // efetua o calculo de gerações e arredonda para menos.
+
+    imprimeTitulo("Desde " + anoDescobrimento );
+    imprime("Se passaram : " + anosPassados + " anos.")
+    imprime("um total de : " + gerações + " gerações.")
+
+
+</script>

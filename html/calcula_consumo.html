@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<h3>Álcool ou Gasolina?</h3>
+<br>
+
+ <script>
+ 	let tanque = 40; // capacidade em litros
+ 	let distanciaGasolina = 400;// kilometros rodados com gasolina.
+ 	let distanciaAlcool = 300;// kilometros rodados com alcool.
+    let consumoLitroGasolina = distanciaGasolina / tanque;
+    let consumoLitroAcool = distanciaAlcool / tanque;
+
+
+   
+    document.write("O consumo por litro na gasolina foi de : " + consumoLitroGasolina + " Km/l");
+    document.write("<br>"); 
+    document.write("O consumo por litro no Alcool foi de : " + consumoLitroAcool + " Km/l");
+
+
+
+    if(consumoLitroGasolina > consumoLitroAcool){
+
+    	document.write("<br>"); 
+    	document.write("<br>");
+    	document.write("Compensa mais rodar na Gasolina");
+
+    } else if (consumoLitroGasolina < consumoLitroAcool) {
+
+    	document.write("<br>"); 
+    	document.write("<br>");
+    	document.write("Compensa mais rodar no Alcool");
+
+    } else {
+
+    	document.write("<br>"); 
+    	document.write("<br>");
+    	document.write("O consumo foi igual");
+    }
+
+ </script>

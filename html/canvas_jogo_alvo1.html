@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Jogo acerte no alvo</title>        
+        <meta charset="utf-8"/>
+    </head>
+
+    <body>
+
+     <h1><u>Acerte no alvo</u></h1><br>
+     <b>PONTOS</b>&nbsp;<input type="button" name="placar" id="placar" value="0" >&nbsp;
+     <b>ERROS</b>&nbsp;<input type="button" name="erros" id="erros" value="0" ><br><br>     
+     <canvas width="600" height="400"></canvas>
+     
+      <script>
+
+        var tela = document.querySelector('canvas');   
+        var pincel = tela.getContext('2d');
+        var placar = parseInt( document.getElementById('placar').value );
+        var erros = parseInt( document.getElementById('erros').value );
+        var raio = 10;
+        var xAlvo = 300;
+        var yAlvo = 200;
+
+
+        
+        // Function que exibe a tela canvas.
+        function mostraTela(cor) {
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(0, 0, 600, 400);
+
+        pincel.strokeStyle = 'black';
+        pincel.strokeRect(0, 0, 600, 400);
+        }
+
+
+
+        // Function que desenha os circulos usados para formar o alvo.
+        function desenhaCirculo(x, y, raio, cor) {
+
+            pincel.fillStyle = cor;
+            pincel.beginPath();
+            pincel.arc(x, y, raio, 0, 2 * Math.PI);
+            pincel.fill();
+        }
+
+
+
+        // Function que desenha um alvo utilizando a function desenhaCirculos().
+        function criaAlvo(xAlvo, yAlvo) {
+
+            mostraTela('ivory');
+            desenhaCirculo(xAlvo, yAlvo, raio + 20, 'red'); // maior círculo
+            desenhaCirculo(xAlvo, yAlvo, raio + 10, 'white');
+            desenhaCirculo(xAlvo, yAlvo, raio, 'red'); // menor circulo          
+        }
+
+
+
+        //Function que gera um número aleatório entre o intervalo escolhido.
+        function getRandomInt(min, max) {
+
+            min = Math.ceil(min);
+            max = Math.floor(max);
+
+            let result = Math.floor(Math.random() * (max - min)) + min;
+            return result;
+        }
+
+
+
+        // Function que muda a posição de xAlvo e yAlvo usando a function getRamdomInt(). 
+        function trocaXAlvoYAlvo() {
+            
+            xAlvo = getRandomInt(30, 570);
+            yAlvo = getRandomInt(30, 370);
+        }
+
+
+
+        // Function que ao ser ativada verifica posição X , Y do mouse e verifica o acerto .
+        function dispara(evento) {
+
+            var x = evento.pageX - tela.offsetLeft; // .offsetLeft remove valores a esquerda do canvas. 
+            var y = evento.pageY - tela.offsetTop; // .offsetTop remove valores acima do canvas.
+                    
+            // lógica de acerto
+            if ((x > xAlvo - raio) 
+                    && (x < xAlvo + raio)
+                        && (y > yAlvo - raio) 
+                            && (y < yAlvo + raio)) {
+
+                    document.getElementById('placar').value ++;
+                    trocaXAlvoYAlvo();
+                    criaAlvo(xAlvo, yAlvo);
+            } else { 
+
+                    document.getElementById('erros').value ++; 
+                    trocaXAlvoYAlvo();
+                    criaAlvo(xAlvo, yAlvo);                           
+            }
+
+        }
+
+        criaAlvo(xAlvo, yAlvo);
+        tela.onclick = dispara;
+        
+     </script>
+
+    </body>
+
+    <footer>
+
+     <p2>Utilize o mouse para acertar no alvo</p2>
+
+    </footer>
+
+</html>

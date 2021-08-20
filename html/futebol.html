@@ -1,0 +1,41 @@
+<meta charset ="UTF-8">
+
+<script>
+
+    // Função usada para pular (n) linhas.
+    function pulaLinha(n){
+
+        for(let index = 1; index <= n; index ++ ){
+          document.write("<br><hr>"); // TAG <hr> inclui uma quebra de linha ipressa na tela.    
+        }        
+    }
+
+    // Função imprime mensagem na tela
+    function imprime(frase){
+        document.write("<big>" + frase + "</big>");
+        pulaLinha(1);
+    }
+
+
+    //Função imprime título.
+    function imprimeTitulo(titulo){
+      imprime("<h1>" + titulo + "</h1>")     
+    }
+
+
+    //Função imprime paragrafo
+    function imprimeParagrafo(paragrafo){
+        imprime("<p>" + paragrafo + "</p>")     
+    }
+
+   // A função parseInt() analisa um argumento string e retorna um inteiro
+   let vitorias = parseInt(prompt("Entre com o número de vitórias."));
+   let empates = parseInt(prompt("Entre com o número de empates."));
+
+   let pontos = (vitorias * 3) + empates;
+
+   imprimeTitulo ("Calculo de pontos");
+   imprime ("Os pontos do seu time são : " + pontos + " pontos");
+
+
+</script>
