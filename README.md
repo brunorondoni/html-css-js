@@ -1,4 +1,4 @@
 # HTML - CSS - JS
-✔ exercícios <br>
-✔ resumos <br>
-✔ projetos <br>
+✔ Exercícios <br>
+✔ Resumos <br>
+✔ Projetos <br>
