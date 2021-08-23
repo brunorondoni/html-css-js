@@ -367,12 +367,12 @@ main article section {
 
 }
 
-.tabela .coluna-rank:nth-child(2n +1) {
+.tabela .linha:nth-child(2n +1) {
   background-color:rgb(212, 206, 199);
 
 }
 
 section{
-  height:775px;
+  height:485px;
   overflow-y: scroll;
 }
