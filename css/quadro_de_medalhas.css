@@ -281,14 +281,14 @@ body > header{
 
 body > header .linha .coluna h1{
     color:#fff;
-    margin-left: 30px;
-    font-weight:unset
+    margin-left: 10px;
+    font-weight:monospace;
 
 }
 
 body > header .linha .coluna img{
     width: 100%;
-    max-width: 120px;
+    max-width: 150px;
 
 }
 
@@ -298,7 +298,7 @@ body > header .linha .coluna img{
 main{
     background-color: #f7f7f7;
     height: 100vh;
-    padding-top: 80px;
+    padding-top: 100px;
 }
 
 
@@ -335,11 +335,6 @@ div {
 
 }
 
-main article section .coutry img{
-    width:100%;
-    max-width:30px;
-}
-
 main article header .linha .coluna-medalha span {
     width: 30px;
     height: 30px;
@@ -362,14 +357,8 @@ main article header .linha .coluna-medalha:nth-child(5) span{
 
 }
 
-main article section {
-  font-size:16px;
-
-}
-
 .tabela .linha:nth-child(2n +1) {
   background-color:rgb(212, 206, 199);
-
 }
 
 section{
