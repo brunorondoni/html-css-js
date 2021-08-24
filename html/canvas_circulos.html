@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+
+<canvas id="canvas" width="800" height="600"></canvas>
+
+<script>
+
+    let canvas = document.querySelector("canvas");
+    let brush = canvas.getContext("2d");
+    let x = 0;
+
+    function drawCircle(x, y, radius) {
+
+        brush.fillStyle = 'blue';
+        brush.beginPath();
+        brush.arc(x, y, radius, 0 , 2 * Math.PI);
+        brush.fill();
+
+    }
+
+    function clearCanvas() {
+
+        brush.clearRect(0, 0, 800, 600);
+        brush.fillStyle = 'Ivory';
+        brush.fillRect(0,0,800,600);
+
+    }
+
+    function updateCanvas() {  
+        
+        clearCanvas();
+        drawCircle(x, 20, 10);
+        x++;
+
+    }
+
+
+    setInterval(updateCanvas, 10);
+
+
+</script>
+    
+</body>
+
+</html>
