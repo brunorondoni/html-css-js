@@ -16,12 +16,16 @@
     let canvas = document.querySelector("canvas");
     let brush = canvas.getContext("2d");
     let x = 0;
+    let path = 1;
+    let pulse = 0;
+    let radius = 19;
+    let arrayColor = ['red', 'green', 'blue'];
 
-    function drawCircle(x, y, radius) {
+    function drawCircle(x, y, radius, color) {
 
-        brush.fillStyle = 'blue';
+        brush.fillStyle = color;
         brush.beginPath();
-        brush.arc(x, y, radius, 0 , 2 * Math.PI);
+        brush.arc(x, y, radius, 0 , radius * Math.PI);
         brush.fill();
 
     }
@@ -34,17 +38,28 @@
 
     }
 
-    function updateCanvas() {  
-        
-        clearCanvas();
-        drawCircle(x, 20, 10);
-        x++;
+    function moveCircle() {  
+           
+        if ( x > 800) {
+            path = -1
+        } else if (x < 0) {
+            path = 1;
+        }
 
+        if ( radius > 30) {
+            pulse = -1;
+        } else if (radius < 20) {
+            pulse = 1;
+        }
+
+         x += path; 
+         radius += pulse;
+
+         clearCanvas();   
+         drawCircle(x, 300, radius, arrayColor[2]);
     }
 
-
-    setInterval(updateCanvas, 10);
-
+    setInterval(moveCircle, 20);
 
 </script>
     
