@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 800, 600);
+
+    let x = 20;
+    let y = 20;
+
+    // códigos do teclado
+    let esquerda = 37;
+    let cima = 38;
+    let direita = 39;
+    let baixo = 40;
+
+    // taxa de incremento
+    var taxa = 10;
+
+    let sentidoX = 1;
+    let sentidoY = 1;
+
+    function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+
+    }
+
+    function limpaTela() {
+
+        pincel.clearRect(0, 0, 600, 400);
+    }
+
+    function moveCircle() {
+
+        limpaTela();
+        desenhaCirculo(x, y, 10);
+
+    }
+    
+    function leDoTeclado(evento) {
+           
+        switch(evento.keyCode) {
+
+            case 37 : x -= taxa;  break;
+            case 38 : y -= taxa;  break;
+            case 39 : x += taxa;  break;
+            case 40 : y += taxa;  break;
+            default: console.log(" utilize as setas ")
+
+        }     
+
+    }
+
+    document.onkeydown = leDoTeclado;
+    setInterval(moveCircle, 20);
+    
+
+</script>
+
+</body>
+</html>
