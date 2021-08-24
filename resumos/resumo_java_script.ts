@@ -151,8 +151,6 @@ do {
     x++;
 } while(x<10);
 
-
-
 // Function  usando funções
 
 // Declaração de função sem retorno
@@ -180,7 +178,6 @@ imprimeTexto(Math.max(1,2,3,4,5,6,7,8,9,10));// encontra o maior valor.
 function soma(){
     return  2 + 2;
 }
-
 
 // Declaração de função com retorno e parametros.
 
@@ -220,8 +217,4 @@ function apresentar(nome){
 const apresentarArrow = nome => `meu nome é ${nome}`;
 const somar = (num1, num2) => num1 + num2;
 
-
-console.log(apresentarArrow("Bruno"))
-
-
-
+console.log(apresentarArrow("Bruno"));
