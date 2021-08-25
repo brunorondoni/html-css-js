@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 
     <head>
         <title>Jogo acerte no alvo</title>        
         <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-
-    <body>
-
+    
      <h1><u>Acerte no alvo</u></h1><br>
      <b>PONTOS</b>&nbsp;<input type="button" name="placar" id="placar" value="0" >&nbsp;
      <b>ERROS</b>&nbsp;<input type="button" name="erros" id="erros" value="0" ><br><br>     
      <canvas width="600" height="400"></canvas>
+
      
-      <script>
+    <script>
 
-        var tela = document.querySelector('canvas');   
-        var pincel = tela.getContext('2d');
-        var placar = parseInt( document.getElementById('placar').value );
-        var erros = parseInt( document.getElementById('erros').value );
-        var raio = 10;
-        var xAlvo = 300;
-        var yAlvo = 200;
-
-
+        let tela = document.querySelector('canvas');   
+        let pincel = tela.getContext('2d');
+        let placar = parseInt( document.getElementById('placar').value );
+        let erros = parseInt( document.getElementById('erros').value );
+        let raio = 10;
+        let xAlvo = 300;
+        let yAlvo = 200;
         
         // Function que exibe a tela canvas.
         function mostraTela(cor) {
@@ -35,9 +34,7 @@
         pincel.strokeRect(0, 0, 600, 400);
         }
 
-
-
-        // Function que desenha os circulos usados para formar o alvo.
+        // Function que desenha os circulos usados para formar o alvo.""
         function desenhaCirculo(x, y, raio, cor) {
 
             pincel.fillStyle = cor;
@@ -45,8 +42,6 @@
             pincel.arc(x, y, raio, 0, 2 * Math.PI);
             pincel.fill();
         }
-
-
 
         // Function que desenha um alvo utilizando a function desenhaCirculos().
         function criaAlvo(xAlvo, yAlvo) {
@@ -56,8 +51,6 @@
             desenhaCirculo(xAlvo, yAlvo, raio + 10, 'white');
             desenhaCirculo(xAlvo, yAlvo, raio, 'red'); // menor circulo          
         }
-
-
 
         //Function que gera um número aleatório entre o intervalo escolhido.
         function getRandomInt(min, max) {
@@ -69,17 +62,13 @@
             return result;
         }
 
-
-
         // Function que muda a posição de xAlvo e yAlvo usando a function getRamdomInt(). 
         function trocaXAlvoYAlvo() {
             
             xAlvo = getRandomInt(30, 570);
             yAlvo = getRandomInt(30, 370);
         }
-
-
-
+        
         // Function que ao ser ativada verifica posição X , Y do mouse e verifica o acerto .
         function dispara(evento) {
 
@@ -104,10 +93,19 @@
 
         }
 
+        function mudaAlvo() {
+
+            trocaXAlvoYAlvo();
+            criaAlvo(xAlvo, yAlvo);
+        }
+
         criaAlvo(xAlvo, yAlvo);
         tela.onclick = dispara;
-        
-     </script>
+
+        setInterval(mudaAlvo, 1500);
+
+          
+    </script>
 
     </body>
 
