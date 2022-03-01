@@ -1,13 +1,59 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE HTML>
+ <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menus em HTML5</title>
+    <meta charset="utf-8"/>
+       <title>Listas coloridas</title>
+        <style>
+           ul {
+                list-style-type: none; /* remove os marcadores da lista */
+                padding: 0;
+                margin: 0;
+            }
+ 
+            ol {
+                list-style-type: none; /* remove os marcadores da lista */
+                padding: 20px;
+                margin: 0;
+            }
+            li { 
+                padding-left: 16px; 
+            }
+ 
+            li:before { /* formata o marcador*/
+                content: "֍"; /* insere o marcador desejado */
+                padding-right: 8px;
+                color: blue; /*altera a cor do marcados*/
+                font-size:1em; /* altera o tamanho do marcador*/
+            }
+        </style>
 </head>
 <body>
-    
-    
+    <ul>
+        <li><a href="http://www.uninove.br" target="_blank" title="link para site da Uninove">UNINOVE</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+
+    Lista ordenada com marcadores alterados
+    <ol>
+        <li>Item da lista  1</li>
+        <li>Item da lista  2</li>
+        <li>Item da lista  3</li>
+    </ol>
+    <p></p>
+    Lista não ordenada com marcadores alterados
+    <ul>
+        <li>Item da lista  1</li>
+        <li>Item da lista  2</li>
+        <li>Item da lista  3</li>
+    </ul>
+</body>
+</html>
+    <ul>
+        <li>Item da lista  1</li>
+        <li>Item da lista  2</li>
+        <li>Item da lista  3</li>
+    </ul>
 </body>
 </html>

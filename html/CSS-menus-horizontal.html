@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+ <html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+       <title>Menu na horizontal</title>
+        <style>
+            ul {
+                /*width: 39%;*/ 
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(201, 196, 196);
+                border:1px solid #CCC;
+                overflow: hidden; /* avisa que o conteúdo que passe do total do elemento deverá ficar invisível*/
+                }
+            li {
+                text-align: center;
+                border-bottom: 2px solid #555;
+                float:left; /* flutua nosso menu à esquerda */
+            }
+            li a {
+                display: block;
+                color: rgb(74, 0, 134);
+                padding: 8px 16px;
+                text-decoration:none;
+                font-size:1.2em;
+            }
+            li a:hover {
+                background-color: rgb(175, 175, 175);
+                color: rgb(248, 246, 246);
+                font-size:1.2em;
+            }
+ 
+        </style>
+</head>
+<body>
+ <ul>
+  <li><a href="http://www.uninove.br" target="_blank" title="link para site da Uninove">UNINOVE</a></li>
+  <li><a href="#">News</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About</a></li>
+</ul>
+</body>
+</html>
