@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando Iframes</title>
+    <style>
+        body{
+            background-color:rgb(244, 247, 220);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Utilizando iframes</h1>
+    <h2>Sintaxe do elemento  Iframe</h2>
+    <p>Para a construção de um iframe utilizamos a seguinte linha de comando: &ltiframe&gt; &lt/iframe&gt</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZttwfechUa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h2>Barras de rolagem no iframe</h2>
+    <p>Quando o conteúdo a ser aberto em um iframe é maior que seu tamanho previamente determinado, então as barras de rolagem aparecerão automaticamente de forma automática. Se não quisermos que isto aconteça, podemos utilizar o atributo scrolling que pode ter os seguintes valores</p>
+    <ul>
+        <li>scrolling=no - não exibe as barras de rolagem</li>
+        <li>scrolling=yes -  sempre exibe as barras de rolagem;</li>
+        <li>scrolling=auto - as barras de rolagem surgirão se o conteúdo for maior que o iframe. </li>
+    </ul>
+    <iframe src="http://www.uninove.br" style="width:500px;height:400px;border:none; overflow:hidden;" scrolling="no"></iframe>
+    <h2>Criando links para iframe</h2>
+    <p>Nós podemos direcionar os links para que eles abram os conteúdos diretamente em um iframe. Para que possamos indicar este caminho ao navegador, ou seja, indicar que o alvo de um link é o iframe  precisamos, inicialmente nomear este iframe utilizando o atributo name</p>
+    <iframe style="width: 500px; height: 400px;border:1;overflow:hidden;" scrolling="no" name="teste_iframe"></iframe>
+    <br>
+    <a href="http://www.uninove.br" title="link para o site da UNINOVE" target="teste_iframe">Link para o site da UNINOVE</a>
+    <a href="https://www.youtube.com/embed/_YvHRGsCgMc" title="video sobre UNINOVE" target="teste_iframe">Link para vídeo sobre a UNINOVE</a>
+    <iframe src="http://www.uninove.br" style="width:700px;height:700px;border:none;overflow:hidden;" scrolling="no" name="teste_iframe" sandbox=""></iframe>
+    <iframe src="http://www.uninove.br" style="width:700px;height:700px;border:none;overflow:hidden;" scrolling="no" name="teste_iframe" sandbox="" srcdoc="teste de segurança"></iframe>
+    <iframe src="http://www.uninove.br" style="width:700px;height:700px;border:none;overflow:hidden;" scrolling="no" name="teste_iframe" sandbox="" srcdoc="teste de segurança"></iframe><iframe src="http://www.uninove.br" style="width:700px;height:700px;border:none;overflow:hidden;" scrolling="no" name="teste_iframe"  seamless ></iframe>
+    
+
+</body>
+</html>
