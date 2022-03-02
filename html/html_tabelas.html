@@ -9,8 +9,8 @@
                 font-family: Arial, Helvetica, sans-serif;
                 font-size: 18px;
             }
-            h1{
-                text-align: center;
+            h1,h2,h3,h4{
+                text-align:left;               
             }
             table,th,td{
                 border:2px solid #00F;
@@ -32,7 +32,7 @@
         <p> &lttr&gt &lt/tr&gt : Table row cria as linhas da tabela </p>
         <p> &lttd&gt &lt/td&gt : Table data insere o conteúdo na célula </p>
         <p> &ltth&gt &lt/th&gt : Table header insere o cabeçalho na tabela </p>
-        <table id="tabela_sem_formatacao">
+        <table>
             <tr> <!--linha 1 da tabela -->
                 <th>cabeçalho</th>
                 <td>conteúdo 1 da linha 1</td>
@@ -87,9 +87,8 @@
             <li>colspan: para mesclar colunas.</li>
             <li>rowspan: para mesclar linhas.</li>
         </ul>
-
         <table>
-            <caption>Tabela com célula mesclada</caption>
+            <caption>Tabela com célula mesclada em linha</caption>
             <th colspan=3>Cabeçalho de uma tablela com colspan = 3</th>
             <tr>
                 <td>conteúdo 01 da linha 01</td>
@@ -98,9 +97,110 @@
             </tr>
             <tr>
                 <td>conteúdo 01 da linha 02</td>
+                <td>conteúdo 02 da linha 02</td>
+                <td>conteúdo 03 da linha 02</td>
+            </tr>
+            <tr>
+                <td>conteúdo 01 da linha 03</td>
+                <td>conteúdo 02 da linha 03</td>
+                <td>conteúdo 03 da linha 03</td>
+            </tr>
+            <tr>
+                <td>conteúdo 01 da linha 04</td>
+                <td>conteúdo 02 da linha 04</td>
+                <td>conteúdo 03 da linha 04</td>
             </tr>
         </table>
-
+        <table>
+            <caption>Tabela com célula mesclada em coluna</caption>
+            <th rowspan=5>Cabeçalho de uma tablela com rowspan = 5</th>
+            <tr>
+                <td>Célula 01 - 01</td>
+                <td>Célula 02 - 01</td>
+                <td>Célula 03 - 01</td>
+            </tr>
+            <tr>
+                <td>Célula 01 - 02</td>
+                <td>Célula 02 - 02</td>
+                <td>Célula 03 - 02</td>
+            </tr>
+            <tr>
+                <td>Célula 01 - 03</td>
+                <td>Célula 02 - 03</td>
+                <td>Célula 03 - 03</td>
+            </tr>
+            <tr>
+                <td>Célula 01 - 04</td>
+                <td>Célula 02 - 04</td>
+                <td>Célula 03 - 04</td>
+            </tr>
+        </table>
+        <h2>Formatando um grupo de colunas</h2>
+        <p>Para formatar um grupo de  colunas utilizamos a tag colgroup e col.</p>
+        <table>
+            <caption>Tabela formatada com colgroup e col</caption>
+            <colgroup>
+                <col span="3" style="background-color:aquamarine;">
+                <col style="background-color:#F00;">
+            </colgroup>
+            <th rowspan=4>Cabeçalho com rowspan = 4</th>
+            <tr> <!--Linha 1 da tabela-->
+                <td>Conteúdo 1 da linha 1</td>
+                <td>Conteúdo 2 da linha 1</td>
+                <td>Conteúdo 3 da linha 1</td>
+            </tr>
+            <tr> <!--Linha 2 da tabela-->
+                <td>Conteúdo 1 da linha 2</td>
+                <td>Conteúdo 2 da linha 2</td>
+                <td>Conteúdo 3 da linha 2</td>
+            </tr>
+            <tr> <!--Linha 3 da tabela-->
+                <td>Conteúdo 1 da linha 3</td>
+                <td>Conteúdo 2 da linha 3</td>
+                <td>Conteúdo 3 da linha 3</td>
+            </tr>
+        </table>
+        <h2>Os elementos thead (table head), tbody (table body) e tfoot (table foot)</h2>
+        <table>
+            <caption>Legenda da tabela</caption>
+            <thead>
+            <tr><!--linha 1 da tabela -->
+              <td colspan="3">conteúdo thead</td>
+            </tr>
+           
+            </thead>
+            <tbody>
+            <tr><!--linha 2 da tabela -->
+              <td>conteúdo tbody</td>
+              <td>conteúdo tbody</td>
+              <td>conteúdo tbody</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr><!--linha 3 da tabela -->
+              <td colspan="3">conteúdo tfoot</td>
+            </tr>
+            </tfoot>
+          </table>   
+          <table>
+              <caption>Criando tabela</caption>
+              <thead>
+                  <tr>
+                      <td colspan = "3">THEAD</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr style="height: 200px;">
+                      <td>TBODY</td>
+                      <td>TBODY</td>
+                      <td>TBODY</td>
+                  </tr>
+              </tbody>
+              <tfoot>
+                  <tr>
+                      <td colspan = "3">TFOOT</td>
+                  </tr>
+              </tfoot>
+          </table>     
     </body>
 </html>
-
