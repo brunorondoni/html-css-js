@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Usando tabelas em HTML</title>
+        <style>
+            body{
+                background-color: rgb(244, 247, 220);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+            }
+            h1{
+                text-align: center;
+            }
+            table,th,td{
+                border:2px solid #00F;
+                border-collapse:collapse;
+                padding: 5px;
+                text-align:left;
+                vertical-align:auto;
+                border-spacing: 0px;
+                background-color: rgb(255, 254, 254);
+                width: 800px;
+                height: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Usando Tabelas </h1>
+        <h2> Criando tabelas usando a TAG &lttable&gt</h2>
+        <p> &lttable&gt &lt/table&gt : Cria a tabela </p>
+        <p> &lttr&gt &lt/tr&gt : Table row cria as linhas da tabela </p>
+        <p> &lttd&gt &lt/td&gt : Table data insere o conteúdo na célula </p>
+        <p> &ltth&gt &lt/th&gt : Table header insere o cabeçalho na tabela </p>
+        <table id="tabela_sem_formatacao">
+            <tr> <!--linha 1 da tabela -->
+                <th>cabeçalho</th>
+                <td>conteúdo 1 da linha 1</td>
+                <td>conteúdo 2 da linha 1</td>
+                <td>conteúdo 3 da linha 1</td>
+            </tr>
+            <tr> <!--linha 2 da tabela -->
+                <th>cabeçalho</th>
+                <td>conteúdo 1 da linha 2</td>
+                <td>conteúdo 2 da linha 2</td>
+                <td>conteúdo 3 da linha 2</td>
+            </tr>               
+        </table>
+        <h2>Formatando uma tabela usando CSS</h2>
+        <p>As propriedades em CSS aplicáveis à uma tabela são:</p>
+        <h3>border-collapse: collapse (o valor padrão é separate)</h3>
+        <p>Retira o espaço entre as bordas da tabela.</p>
+        <h3>padding</h3>
+        <p>Define o espaço interno das células da tabela.</p>
+        <h3>text-align</h3>
+        <p>Define o alinhamento horizontal das células da tabela.</p>
+        <h3>vertical-align</h3>
+        <p>Define o alinhamento vertical das células da tabela.</p>
+        <h3>border-spacing</h3>
+        <p>Define o espaço entre as células de uma tabela.</p>
+        <h3>background-color</h3>
+        <p>Define a cor de fundo de uma tabela ou célula.</p>
+        <h3>width</h3>
+        <p>Define largura de tabela ou célula.</p>
+        <h3>height</h3>
+        <p>Define altura de tabela ou célula. </p>
+        <h2>Criando legendas em tabelas.</h2>
+        <p>Para criar uma legenda em uma tabela utilizamos a tag caption. Seu código é: &ltcaption&gt &lt/caption&gt</p>
+        <table>
+            <caption>Legenda da tabela</caption>
+            <tr> <!--Linha 01 da tabela-->
+                <th>Cabeçalho da linha 1</th>
+                <td>conteúdo 1 da linha 1</td>
+                <td>conteúdo 2 da linha 1</td>
+                <td>conteúdo 3 da linha 1</td>        
+            </tr>
+            <tr> <!--Linha 02 da tabela-->
+                <th>Cabeçalho da linha 2</th>
+                <td>conteúdo 1 da linha 2</td>
+                <td>conteúdo 2 da linha 2</td>
+                <td>conteúdo 3 da linha 2</td> 
+            </tr>
+        </table>
+        <h2>Mesclando células de uma tabela</h2>
+        <p>Quando precisamos mesclar células de uma tabelas utilizamos os seguintes atributos, sempre aplicados aos table data ou td (células) das tabelas:</p>
+        <ul>
+            <li>colspan: para mesclar colunas.</li>
+            <li>rowspan: para mesclar linhas.</li>
+        </ul>
+
+        <table>
+            <caption>Tabela com célula mesclada</caption>
+            <th colspan=3>Cabeçalho de uma tablela com colspan = 3</th>
+            <tr>
+                <td>conteúdo 01 da linha 01</td>
+                <td>conteúdo 02 da linha 01</td>
+                <td>conteúdo 03 da linha 01</td>
+            </tr>
+            <tr>
+                <td>conteúdo 01 da linha 02</td>
+            </tr>
+        </table>
+
+    </body>
+</html>
+
