@@ -10,9 +10,7 @@
             <h1>HTML5 & CSS3</h1>
             <nav>
                 <ul>
-                    <il><a href="estudo_html.html">HTML</a></il>
-                    <il><a href="estudo_html.html">CSS</a></il>
-                    <il><a href="estudo_html.html">JS</a></il>
+                    <il><a href=#>Formulários</a></il>
                 </ul>
             </nav>
         </header>
@@ -20,6 +18,104 @@
         </nav>
         <main>
             <h1>Formulários</h1>
+            <p>Para criar formulários usamos as tags &ltform&gt e &lt/form&gt </p><br>
+            <p>
+                <ul>
+                    <il><strong>action:</strong> informa o local (URL) que queremos que os  dados recolhidos do formulário sejam enviados.</il><br>
+                    <il><strong>method:</strong> define qual o método HTTP que iremos utilizar para  enviar os dados que podem ser   "GET"  (obter) ou "POST" (postar).</il>
+                </ul>
+            </p><br>
+            <h2>Tipos de entrada de dados em um formulário</h2>
+            <p>Utilizamos o elemento input para receber dados em um formulário. Um elemento imput deve ser descrito em HTML da seguinte forma:&ltinput&gt (sem fechamento).</p><br>
+            <h2>Tipos de elemento input</h2>
+            <p>O elemento input pode ser dos seguintes tipos (atributo type):</p>
+            <ul>
+                <li>input type text</li>
+                <li>input type password</li>
+                <li>input type radio</li>
+                <li>input type checkbox</li>
+                <li>input type color</li>
+                <li>input type data</li>
+                <li>input type datetime-local</li>
+                <li>input type email</li>
+                <li>input type month</li>
+                <li>input type number</li>
+                <li>input type range</li>
+                <li>input type search</li>
+                <li>input type tel</li>
+                <li>input type time</li>
+                <li>input type url</li>
+                <li>input type week</li>
+                <li>input type file</li>
+                <li>input type button</li>
+                <li>input type reset</li>
+                <li>input type submit</li>
+            </ul><br>
+            <p><strong>input type text </strong>Cria um campo de entrada de texto de linha única. Podemos limitar o número de caracteres dos campos que aceitam textos utilizando o atributo  maxlength.</p><br>
+            <p><strong>input type password </strong>Cria um campo de texto linha única em que não é possível a leitura, no lugar do texto aparecem símbolos.Podemos limitar o número de caracteres dos campos que aceitam textos utilizando o atributo  maxlength.</p><br>
+            <p><strong>input type radio </strong>Cria uma opção de seleção. Como todos os elementos input radio tem o mesmo nome, quando um é selecionado, o outro é desmarcado. Neste caso o atributo value é obrigatório, pois será o valor enviado ao banco de dado. </p><br>
+            <p><strong>input type color </strong>Cria um campo de entrada que permite a seleção de uma cor. </p><br>
+            <p><strong>input type checkbox </strong>Cria opções de seleção. Mas ao contrário do input rádio, cada um dos elementos recebe um nome e, por isto, a opção de seleção não é limitada.Podemos iniciar o formulário com uma ou mais opções marcadas utilizando o checked. O value é opcional, pois serão enviadas como a informação "on" para aqueles que forem marcados e "off" para os não marcados.  </p><br>
+            <p><strong>input type data </strong>Cria um campo de entrada com uma data por meio de digitação ou seleção por calendário,Você  pode se quiser adicionar restrições às datas utilizando os atributos max e min. </p><br>
+            <p><strong>input type datetime-local </strong>Cria um campo de entrada com data e hora,sem fuso horário</p><br>
+            <p><strong>input type email </strong>Cria um campo de entrada para e-mail. Alguns navegadores já realizam a validação deste campo automaticamente.</p><br> 
+            <p><strong>input type month </strong>Cria um campo de entrada para selecionar um mês e ano. </p><br>
+            <p><strong>input type number </strong>Cria um campo de entrada numérico,Você pode restringir quais números serão aceitos utilizando os atributos min e max.</p><br>
+            <p><strong>input type range </strong>Cria uma entrada de controle deslizante numérico (padrão é de 0 a 100). Você pode definir restrições utilizando os atributos min, max e step (informa um passo, ou seja, de quanto em quanto deve ser contado).</p><br>
+            <p><strong>input type search </strong>Cria uma entrada de campo de pesquisa (um campo de pesquisa é um campo  de texto padrão). A diferença está que quando você digita um texto, aparece o "x" para excluir. </p><br>
+            <p><strong>input type tel</strong>Cria um campo de entrada para número de telefone. (suportado apenas no safari 8). </p><br>
+            <p><strong>input type time</strong>Cria um campo de entrada que permite a selecção de hora(sem fuso horário)</p><br>
+            <p><strong>input type url</strong>Cria um campo de entrada que devem conter um endereço url. Alguns navegadores já realizam a validação deste campo automaticamente. </p><br>
+            <p><strong>input type week</strong>Cria um campo de entrada que permite selecionar uma semana e ano.</p><br>
+            <p><strong>input type file</strong>Cria um campo de seleção de arquivo.</p><br>
+            <p><strong>input type button</strong>Cria um botão nulo, sem ação.  Utilize o atributo value para determinar o nome do botão.</p><br>
+            <p><strong>input type reset</strong>Cria um botão de reinicialização do formulário (limpa todos os campos).Utilize o atributo value para determinar o nome do botão.</p><br>
+            <p><strong>input type submit</strong>Cria um botão de submissão do formulário. Utilize o atributo value para determinar o nome do botão.</p><br>
+            
+            <form action="teste.php" method="post" name="meu_formulario">
+                Login: <input type="text" name="login" maxlength="20">
+                Senha: <input type="password" name="senha" maxlength="8"><br>
+                Sexo: <input type="radio" name="sexo" value="M">Masculino
+                      <input type="radio" name="sexo" value="F">Feminino
+                Selecione uma cor: <input type="color" name="cor"><br>
+                Deseja receber informações por: <input type="checkbox" name="email" checked>E-mail
+                <input type="checkbox" name="fone" checked>Telefone
+                <input type="checkbox" name="correio" checked>Correio<br>
+                Selecione uma data: <input type="date" name="data"><br>
+                Selecione uma data antes de 01/01/2012:<input type="date" name="data_2011" max="2011-12-31"><br>
+                Selecione uma data depois de 01/01/2012:<input type="date" name="data_2012" min="2012-01-02"><br>
+                Selecione uma data e um horário: <input type="datetime-local" name="data_hora_local"><br> 
+                Selecione o mês e ano de seu nascimento: <input type="month" name="nascimento"><br>
+                Selecione um número qualquer:   <input type="number" name="numero"><br>
+                Selecione um número de 1 a 10: <input type="number" name="numero_restrito" min="1" max="10"><br>
+                Dê uma nota para nossos serviços: 0<input type="range" name="satisfacao" min="1" max="10">10<br>
+                Digite uma palavra chave para pesquisa: <input type="search" name="busca"><br>
+                Informe seu telefone: <input type="tel" name="telefone"> <br>
+                Informe a hora de seu voo: <input type="time" name="hora_voo"><br>
+                Informe o endereço (URL) de seu website: <input type="url" name="site"><br>
+                Selecione a semana do ano que deseja obter licença: <input type="week" name="licenca"><br>
+                Selecine um arquivo para envio: <input type="file" name="arquivo"><br>
+                Botão de teste <input type="button" value="botão de teste"><br>
+                <input type="reset" value="limpe os dados do formulário"><br>
+                <input type="submit" value="envie o formulário"><br>                            
+            </form><br>
+            <h2>O elemento textarea (area de texto)</h2><br>
+            <p>Com o elemento textarea podemos criar um campo de entrada de dados que permite a digitação de uma grande quantidade de texto. Para especificar sua largura e altura utilizamos os atributos:</p><br>
+            <ul>
+                <li>cols: define a largura do textarea (colunas)</li>
+                <li>rows: define a altura do textarea (linhas)</li>
+            </ul><br>
+            <p>Caso o texto digitado for maior que o tamanho do textarea, barras de rolagem aparecerão automaticamente. O valor padrão (value) de um textarea deve ser colocado entre as tags de abertura e fechamento. </p><br>
+            <form action="teste2.php" method="post" name="meu_formulario2">
+                Deixe seu recado:<br>
+                <textarea name="recado" rows="15" cols="40">Deixe seu recado para que possamos entrar em contato.
+                </textarea>
+            </form><br>
+            <h2>O elemento select</h2><br>
+            <p>Utilizamos o elemento select quando queremos criar uma lista suspensa para nosso formulário.
+
+                Para criar as opções  de nossa lista, utilizamos o elemento option sendo que podemos deixar uma destas opções previamente selecionadas utilizando o atributo select.</p><br>
+
         </main>
     </body>
 
