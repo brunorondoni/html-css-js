@@ -15,20 +15,21 @@ header{
     text-align: center;
 }
 nav{
+
     color:white;
     background-color: #282A35;
     width: 100%;
-    height: 10%;
-    border: 1px solid #FFF9D9;
+    height: 100%;
 }
 #menu_lateral{
     position:fixed;
     text-align:left;       
     float: left;  	
-    width: 10%;  
-    height: 100%;
+    width: 10%;
+    height: 100%; 
     background-color: #282A35;
     border: 1px solid #FFF9D9;
+    bottom: 0px;
 }
 main{
     display: block;

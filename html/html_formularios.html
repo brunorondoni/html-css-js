@@ -112,11 +112,62 @@
                 </textarea>
             </form><br>
             <h2>O elemento select</h2><br>
-            <p>Utilizamos o elemento select quando queremos criar uma lista suspensa para nosso formulário.
-
-                Para criar as opções  de nossa lista, utilizamos o elemento option sendo que podemos deixar uma destas opções previamente selecionadas utilizando o atributo select.</p><br>
-
+            <p>Utilizamos o elemento select quando queremos criar uma lista suspensa para nosso formulário. Para criar as opções  de nossa lista, utilizamos o elemento option sendo que podemos deixar uma destas opções previamente selecionadas utilizando o atributo select.</p><br>
+            <form action="teste3.php" method="post" name="meu_formulario3">
+                <select name="estado">
+                    <option value ="SP">São Paulo</option>
+                    <option value ="RJ">Rio de Janeiro</option>
+                    <option value ="MG">Minas Gerais</option>
+                    <option value = "nenhum" selected>Selectione o estado</option>
+                </select>
+            </form><br>
+            <h2>O elemento optgroup</h2>
+            <p>Utilizamos este elemento em conjunto com o elemento select quando precisamos organizar as informações do select em grupos. Para definir um título para cada grupo utilizaremos o elemento label.</p>
+            <form action="teste.php" method="post" name="meu_formulario">
+                <form id="form" method="post" action="">                   
+                        <label for="feira">Feira<br />
+                            <select name="select" id="feira">
+                                <option selected value="1">Escolha um item</option>
+                                <optgroup label="Frutas">
+                                    <option value="banana">Banana</option>
+                                    <option value="laranja">Laranja</option>
+                                    <option value="melancia">Melancia</option>
+                                    <option value="uva">Uva</option>
+                                </optgroup>
+                                <optgroup label="Verduras">
+                                    <option value="alface">Alface</option>
+                                    <option value="agriao">Agrião</option>
+                                    <option value="rucula">Rúcula</option>
+                                </optgroup>
+                            </select>
+                        </label>   
+                 </form>
+                 <p> 
+                 <input type="reset" value="limpe os dados do formulário">               
+                 <input type="submit" value="envie o formulário">
+             </form><br>
+             <br><h2>O elemento datalist</h2>
+             <p>Com o elemento datalist podemos criar um campo input que vem com uma lista suspensa de dados pré-definidos que serão exibidos todos se o usuário clicar no campo ou aos poucos, de acordo com a insesão de texto pelo usuário. No input inserimos um atributo list sendo que o elemento datalist deve ser utilizado com um id.</p>
+             <form action="teste.php" method="post" name="meu_formulario">
+                Informe a marca de seu carro: 
+                <input list="carros">
+                    <datalist id="carros">
+                      <option value="Ford">
+                      <option value="BMW">
+                      <option value="Fiat">
+                      <option value="GM">
+                      <option value="Honda">
+                      <option value="Audi">
+                    </datalist>         
+                </form><br>
+                <h2>O elemento keygen</h2>
+                <p>Com este elemento podemos autenticar de forma segura usuários pois quando utilizando ele cria um campo gerador de par de chaves. Com o envio do formulário temos a geração de duas chaves uma pública e outra privada sendo que a pública fica armazenada localmente e a privada fica no servidor. Com a chave pública podemos gerar, por exemplo, um certificado de cliente para autenticar um usuário no futuro.</p>
+                <form action="teste.php" method="post" name="meu_formulario">
+                    Usário: <input type="text" name="user">
+                   <keygen name="seguro">
+                   <input type="submit" name="criar chave de segurança">
+                </form>
+            </body>
         </main>
     </body>
-
 </html>
