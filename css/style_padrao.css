@@ -49,3 +49,25 @@ footer{
     position:absolute;
     float: right;
 }
+fieldset{
+    color:#00F; 
+    padding:8px;
+    background: #f0efed;
+    text-align:left;
+       border:2px solid #F00;;
+ }
+
+ legend {
+    color:#F00; 
+    padding:10px;
+        font-size:20px;
+        text-align:center;
+        font-weight: bold;
+        font-style: italic;
+ }
+
+ input{
+    background:rgb(255, 255, 255);
+    color:#600;
+    font-weight: bold;
+}

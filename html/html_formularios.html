@@ -271,8 +271,67 @@
                 Selecione uma data: <input type="date" required>
                 <input type="reset" value="limpe os dados do formulário">
             </fieldset>
-            </form>
-            
+            </form><br>
+            <h2>Atributos min, max e step</h2>
+            <p>Utilizamos os atributos min e max para determinar valores máximos e mínimos para um campo. Com o step criamos as "setinhas para baixo e para cima" no campo, e determinamos o avanço numérico (de quanto em quanto) será alterado o valor. <input type="number" min="0" max="100" step="10"></p><br>
+            <h2>Atributo pattern (padronizar)</h2>
+            <p>Utilizamos o atributo pattern quando queremos criar uma expressão regular para determinar um padrão de preenchimento de um campo como, por exemplo de um e-email ou mesmo CPF.</p><br>
+            <h3> Apenas letras minúsculas ou maiúscula </h3>
+            <input type="text" name="texto"  required pattern="[a-z\s]+$" />
+            <input type="text" name="texto"  required pattern="[A-Z\s]+$" />
+            <h3> Apenas números </h3>
+            <input type="text" name="numeros" required  pattern="[0-9]+$" />
+            <h3> Validação de uma data específica </h3>
+            <input type="date"  name="data" maxlength="10"  required  pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2010-01-01" max="2016-01-01" />
+            <h3> Validação de hora </h3>
+            <input type="time"  maxlength="8" name="hora" required pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$" />
+            <h3> Validação de número de telefone </h3>
+            <input type="tel"  maxlength="15" name="telefone"  required pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" />
+            <h3> Validação de e-mail </h3>
+            <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /><br><br>
+            <h2>O atributo placeholder (espaço reservado)</h2>
+            <p>Com o atributo placeholder podemos dar uma dica por meio de um texto que aparecerá em nosso campo de entrada de dados do formulário. Este texto desaparece automaticamente quando o usuário começa a preencher o campo.</p>
+            <input type="text" name="numeros" required  pattern="[0-9]+$" placeholder="digite apenas números" /> <br><br>
+            <h2>O Atributo multiple</h2>
+            <p>Com este atributo podemos inserir mais de um valor no campo de entrada. É utilizado nos campos de entrada de e-mail e arquivo.</p><br>
+            <input type="file" name="teste" multiple>
+            <br>
+            <form action="teste.php" method="post" name="meu_formulario"><br>
+                <fieldset>
+                   <legend>Atributo required (requeridos) </legend>
+                   Login: <input type="text" name="login" required>
+                   Senha: <input type="password" name="senha" required>
+                   <p>
+                   Sexo:<br>
+                   <input type="radio" name="sexo" value="M" required>Masculino
+                   <input type="radio" name="sexo" value="F" required>Feminino
+                   <p>
+          
+                   Selecione uma data: <input type="date" required>
+                   <p>
+                </fieldset>  
+                <fieldset>
+                   <legend>Atributos min, max e step</legend>    
+                   <input type=number min="0" max="100" step="10"><br />
+                </fieldset>   
+                <fieldset>
+                   <legend>Atributo pattern (padronizar) </legend>  
+                   Validação de apenas letras minúsculas: <input type="text" name="texto" required pattern="[a-z\s]+$" /><p>
+                   Validação apenas números:   <input type="text" name="numeros" required  pattern="[0-9]+$" /><p>
+                   Validação de uma data específica: <input type="date"  name="data" maxlength="10"  required  pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2010-01-01" max="2016-01-01" /><p>
+                   Validação de hora : <input type="time"  maxlength="8" name="hora" required pattern="[0-9]{2}:[0-9]{2} [0-9]{2}$" /> <p>
+                   Validação de número de telefone (xx) xxxx-xxxx: <input type="tel"  maxlength="15" name="telefone"  required pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$" /><p>
+                   Validação de e-mail: <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /><p>
+                </fieldset>  
+                <fieldset>
+                   <legend>O atributo placeholder (espaço reservado)</legend>      
+                   Mensagem de orientação: <input type="text" name="numeros" required  pattern="[0-9]+$" placeholder="digite apenas números" />
+                </fieldset>
+               <p>
+               <input type="reset" value="limpe os dados do formulário">
+               <p>
+               <input type="submit" value="envie o formulário">
+           </form>
         </main>
     </body>
 </html>
