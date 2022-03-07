@@ -216,8 +216,63 @@
                 </fieldset>                
                 <input type="reset" value="limpe os dados do formulário">                
                 <input type="submit" value="envie o formulário">
-            </form>
+            </form><br>
             <h2>Enviando as informações de um formulário para e-mail</h2>
+            <p>Nós podemos enviar as informações de um formulário para um e-mail pré-determinado. Para isto precisamos informar no atributo action qual o e-mail que receberá os dados do formulário e  informar que estes dados serão enviados como uma planilha de texto com o atributo enctype="text/plain".</p>
+            <br><p><strong>Observação: </strong>Para a utilização correta deste tipo de envio é necessário que o Outlook ou outra ferramenta de e-mail esteja instalada na máquina. </p>
+            <form action="mailto:meu_email@gmail.com" method="post" name="meu_formulario" enctype="text/plain">
+                <fieldset>
+                    <legend>Login</legend>
+                    Login: <input type="text" name="login">
+                    Senha: <input type="password" bame="seha"><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Outras informações</legend>
+                    Sexo:
+                    <input type="radio" name="sexo" value="M">Masculino
+                    <input type="radio" name="sexo" value="F">Feminino
+                    <br>
+                    Deseja receber informações por:<br>
+                    <input type="checkbox" name="email" checked> E-mail
+                    <input type="checkbox" name="fone" checked> Telefone
+                    <input type="checkbox" name="correio" checked> Correio
+                    <br>
+                    Selecione uma cor: <input type="color" name="cor">
+                </fieldset>
+                <fieldset>
+                    <legend>Datas Importantes</legend>
+                    Selecione uma data: <input type="date">
+                    <br>
+                    Selecione uma data antes de 01/01/2012: <input type="date" name="data_2011" max="2011-12-31">
+                    <br>
+                    Selecione uma data depois de 01/01/2012: <input type="date" name="data_2012" min="2012-01-02">
+                    <br>
+                    Selecione uma data e horário: <input type="datetime-local" name="data_hora_local"></input>
+                </fieldset>
+                <input type="reset" value="Limpe os dados do formulário">
+            </form><br>
+            <h2>Validação de formulários HTML</h2>
+            <p>Sempre que vamos preencher um formulário há a necessidade de que façamos este preenchimento de forma correta, previamente especificado pelo desenvolvedor. </p><br>
+            <p>Este tipo de validação serve tanto para que sejam enviadas informações corretas quanto para proteger as empresas e os usuários.</p><br>
+            <h3>Tipos de validação</h3>
+            <p>A validação de um formulário pode ocorrer do lado do cliente ou do lado do servidor.</p><br>
+            <p>No caso de validação do lado cliente pode ser realizada por meio da utilização de javascript (que pode ser customizada) ou por meio de validação com a utilização de HTML5,  que tem uma melhor perfomance do que com javascrit mas não é tão customizável.  </p><br>
+            <h3>Validando formulários com HTML5</h3>
+            <p>Com o HTML podemos realizar a validação dos campos de um formulário da seguinte forma:</p><br>
+            <h3>Atributo required</h3>
+            <p>Este atributo deve ser utilizado sempre que um campo de entrada de dados for obrigatório. Temos de prestar atenção pois não podemos utilizá-la em todas os tipos de entrada, mas é de grande ajuda. </p><br>
+            <p>Ao tentar enviar o formulário clicando no botão submit o usuário receberá uma mensagem de que o campo é obrigatório. </p><br>
+            <form action="teste.php" method="post" name="meu_formulario">
+                <fieldset>
+                <legend>Formulário com atributo required</legend>
+                Login:<input type="text" name="login" required><br>
+                Senha:<input type="password" name="senha" required><br>
+                Sexo: <input type="radio" name="sexo" value="M" required>Masculino <input type="radio" name="sexo"value=F required>Feminino<br>
+                Selecione uma data: <input type="date" required>
+                <input type="reset" value="limpe os dados do formulário">
+            </fieldset>
+            </form>
+            
         </main>
     </body>
 </html>
