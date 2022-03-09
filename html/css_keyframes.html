@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="urf-8">
+        <title>Keyframes</title>
+        <style>
+            /*Código da animação*/
+            @keyframes teste { /* Criação do @keyframes com nome teste*/
+            from {background-color: #00F; float:left;} /*Início da animação*/
+            to {background-color: #F00;float:right} /*Fim da animação*/
+            }
+            @keyframes teste2 {
+                0% {background-color:#FF0;left: 0px; top:300px;}/*Posição inicial*/
+                25% {background-color:#F00;left: 400px; top:300px;}
+                50% {background-color:#0F0;left: 400px; top:600px;}
+                75% {background-color:#F0F;left: 0px; top:600px;}
+                100% {background-color:#FF0;left: 0px; top:300px;}/* volta a posição inicial  */
+            }
+
+             #exemplo1{ /*Elemento que vamos aplicar a animação*/
+                width: 300px;
+                height: 200px;
+                background-color: #00F;
+                animation-name: teste;/*Vinculação ao @keyframes pelo nome*/
+                animation-duration: 5s; /*Tempo de animação*/
+             }
+             
+             #exemplo2{ /*Elemento que vamos aplicar a animação*/
+                width: 300px;
+                height: 200px;
+                left: 0px;
+                top: 100px;
+                position: relative; /* definição da posição do elemento */
+                background-color: #00F;
+                animation-name: teste2;/* vinculação ao @keyframes pelo nome */
+                animation-duration: 5s;/* tempo da animação */
+             }
+        </style>
+    </head>
+    <body>
+        <h1>Usando Keyframes</h1>
+        <div id="exemplo1"></div>
+        <div id="exemplo2"></div>
+
+    </body>
+</html>
