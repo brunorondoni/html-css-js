@@ -55,6 +55,7 @@
                 animation-iteration-count: infinite;/* define o número de vezes que a animação ocorrerá. Caso deseje que ela funcione infinitamente utilize o valor infinite */
                 animation-direction: reverse;/* define o sentido da animação. Pode ser reverse ou alternate */
                 animation-timing-function:linear; /*define uma animação com um início lento*/
+                
              }
              #exemplo4{
                  width: 100px;
@@ -76,6 +77,15 @@
                  width: 695px;
                  height: 620px;
              }
+             img{ /*Aplicando transição a uma imagem*/
+                width: 300px;
+                height: 200px;
+                transition: width 2s, height 3s; /* propriedade transition informando que será alterada a largura e altura  com tempos diferentes*/ 
+             }
+             img:hover{ /* elemento img com o estado hover - mouse sobre - que ativará a transição até 600px  de largura e 300px de altura*/ 
+                width: 600px;
+                height: 300px;
+             }
              div{
                 border-style:groove;
                 width:700px;
@@ -87,7 +97,12 @@
     <body>
         <h1>Usando Keyframes</h1>
         <div>
+            <div id="exemplo1"></div>
+            <div id="exemplo2"></div>
+            <div id="exemplo3"></div>
+            <div id="exemplo4"></div>
             <div id="exemplo5"></div>
         </div>
+        <img src="/img/google.jpeg" alt="Teste de transição com imagens">
     </body>
 </html>
