@@ -10,14 +10,21 @@
             to {background-color: #F00;float:right} /*Fim da animação*/
             }
             @keyframes teste2 {
-                0% {background-color:#FF0;left: 0px; top:300px;}/*Posição inicial*/
-                25% {background-color:#F00;left: 400px; top:300px;}
-                50% {background-color:#0F0;left: 400px; top:600px;}
-                75% {background-color:#F0F;left: 0px; top:600px;}
-                100% {background-color:#FF0;left: 0px; top:300px;}/* volta a posição inicial  */
-            }
+                0%   {background-color:#FF0; left:0px; top:0px;}/* posição inicial */
+                25%  {background-color:#F00; left:400px; top:0px;}
+                50%  {background-color:#0F0; left:400px; top:400px;}
+                75%  {background-color:#F0F; left:0px; top:400px;}
+                100% {background-color:#FF0; left:0px; top:0px;}/* volta a posição inicial  */                 
+            } 
+            @keyframes teste3 {
+                0%   {background-color:#FF0; left:0px; top:0px;width:300px;height:200px;}/* posição inicial */
+                25%  {background-color:#F00; left:400px; top:0px;width:200px;height:100px;}
+                50%  {background-color:#0F0; left:400px; top:400px;width:100px;height:50px;}
+                75%  {background-color:#F0F; left:0px; top:400px;width:200px;height:100px;}
+                100% {background-color:#FF0; left:0px; top:0px;width:300px;height:200px;}/* volta a posição inicial  */
+            }           
 
-             #exemplo1{ /*Elemento que vamos aplicar a animação*/
+             #exemplo1 { /*Elemento que vamos aplicar a animação*/
                 width: 300px;
                 height: 200px;
                 background-color: #00F;
@@ -26,21 +33,61 @@
              }
              
              #exemplo2{ /*Elemento que vamos aplicar a animação*/
+                border-style:none;
                 width: 300px;
                 height: 200px;
-                left: 0px;
-                top: 100px;
                 position: relative; /* definição da posição do elemento */
                 background-color: #00F;
                 animation-name: teste2;/* vinculação ao @keyframes pelo nome */
                 animation-duration: 5s;/* tempo da animação */
+                animation-delay: 0s;/* tempo de espera para começar a animação */
+                animation-iteration-count: infinite;/* define o número de vezes que a animação ocorrerá. Caso deseje que ela funcione infinitamente utilize o valor infinite */
              }
+             #exemplo3{ /*Elemento que vamos aplicar a animação*/
+                border-style:none;
+                width: 300px;
+                height: 200px;
+                position: relative; /* definição da posição do elemento */
+                background-color: #00F;
+                animation-name: teste3;/* vinculação ao @keyframes pelo nome */
+                animation-duration: 5s;/* tempo da animação */
+                animation-delay: 0s;/* tempo de espera para começar a animação */
+                animation-iteration-count: infinite;/* define o número de vezes que a animação ocorrerá. Caso deseje que ela funcione infinitamente utilize o valor infinite */
+                animation-direction: reverse;/* define o sentido da animação. Pode ser reverse ou alternate */
+                animation-timing-function:linear; /*define uma animação com um início lento*/
+             }
+             #exemplo4{
+                 width: 100px;
+                 height: 200px;
+                 background-color: #00F;
+                 transition: width 1s; /* propriedade transition informando que será alterada a largura no tempo de 4 segundos*/  
+             }
+             #exemplo4:hover {  /* elemento com o estado hover - mouse sobre - que ativará a transição até 600px de largura*/
+                width: 695px;
+             }
+
+             #exemplo5 {
+                 width: 300px;
+                 height: 200px;
+                 background-color: #00F;
+                 transition: width 1s, height 1s; /* propriedade transition informando que será alterada a largura e altura  com tempos diferentes*/   
+             }
+             #exemplo5:active {
+                 width: 695px;
+                 height: 620px;
+             }
+             div{
+                border-style:groove;
+                width:700px;
+                height:625px;
+
+                }
         </style>
     </head>
     <body>
         <h1>Usando Keyframes</h1>
-        <div id="exemplo1"></div>
-        <div id="exemplo2"></div>
-
+        <div>
+            <div id="exemplo5"></div>
+        </div>
     </body>
 </html>
