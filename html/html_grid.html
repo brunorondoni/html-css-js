@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<title>Exemplo grid</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<style>
+* {
+    box-sizing:border-box;
+}
+.organiza {
+    overflow:auto;
+    position:relative;
+   }
+.grid {
+    width:8.33%;
+    margin:0;
+    border-right:1px solid #666;
+    height:100%;
+    float:left;
+    }
+    
+@media only screen and (max-width: 700px) {
+    body {
+        background-color: #000;
+    }
+ 
+}
+</style>
+</head>
+<body>
+ 
+<div style="position:absolute;opacity:0.9;width:auto;left:8px;right:10px;"><!--inicio da div principal que contém o layout -->
+    <div class="layout"><!--inicio do layout --> 
+    
+        <div class="organiza" style="height:120px;"><!-- inicio do topo -->
+            <div class="grid" style="width:100%;background:#0F0;border-right-color:transparent;"></div>
+        </div><!-- fim do topo -->
+    
+        <div class="organiza" style="height:330px;"><!-- inicio do meio -->
+            <div class="grid" style="background-color:#000;border:none;width:25%;padding-top:15px;"><!-- inicio da div preta embaixo das divs amarelas da esquerda - menu esquerda -->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;margin-bottom:10px;"></div><!--div amarela-->
+                <div style="background-color:#FF0;border:none;width:100%;height:10%;"></div><!--div amarela-->
+            </div><!-- fim  inicio da div preta embaixo das divs amarelas da esquerda - menu esquerda-->   
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#F00;border:none;"></div><!-- div vermelha do meio-->
+            <div class="grid" style="background-color:#000;border:none;width:25%;padding-top:15px;"><!--inicio da div preta embaixo da div da direita azul-->
+                <div style="background-color:#00F;border:none;width:100%;height:90%;"></div><!--div da direita azul-->
+            </div><!-- fim da div preta embaixo da div da direita azul-->
+        </div><!-- fim  do meio -->
+    
+        <div class="organiza" style="height:50px;"><!-- inicio do rodapé -->
+            <div class="grid" style="width:100%;background:#C0C;border-right-color:transparent;"></div><!--div roxa-->
+        </div><!-- fim do rodapé -->
+ 
+    </div><!--fim do layout --> 
+</div><!--fim da div principal que contém o layout -->
+    
+<div class="grid_principal" style="opacity:0.1;"><!--inicio 12 grids principais -->
+    <div class="organiza" style="height:500px;">
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;border-left:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+        <div class="grid" style="background-color:#fff;border-right:1px solid #000;"></div>
+    </div>
+</div><!--fim 12 grids principais -->
+ 
+<p>Redimensione a janela para ver o resultado</p>
+ 
+</body>
+</html>
