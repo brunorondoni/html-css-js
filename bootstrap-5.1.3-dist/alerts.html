@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ 
+  <head>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modelagem de Interfaces - Bootstrap</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+ 
+  </head>
+  
+  <body>
+    
+    <div class="container">
+ 
+     <h2>Bootstrap - Alerts</h2>
+      
+      <div class="alert alert-success">
+        <strong>Sucesso!</strong> Indica uma mensagem de sucesso.
+      </div>
+ 
+      <div class="alert alert-info">
+	 <strong>Info!</strong> Indica uma mensagem informativa.
+      </div>
+ 
+      <div class="alert alert-warning">
+	 <strong>Atenção!</strong> Indica a necessidade de atenção.
+      </div>
+ 
+       <div class="alert alert-danger">
+	 <strong>Perigo!</strong> Indica alguma ação potencialmente arriscada.
+       </div>
+     
+    </div>
+
+    <div class="container">
+ 
+        <h2>Bootstrap - Alerts</h2>
+         
+         <h3>Alerta com link</h3>      
+         <div class="alert alert-success">
+          <strong>Parabéns!</strong> Ação finalizada com sucesso. 
+          <a href="#" class="alert-link">Clique aqui</a> e visualize seu comprovante.
+         </div>
+    
+         <h3>Alerta com opçao de fechamento - Elemento a</h3>
+         <div class="alert alert-success alert-dismissable">
+          <a  href="#" class="close" data-dismiss="alert" 
+              aria-label="close">×
+          </a>
+          <strong>Parabéns!</strong> Ação finalizada com sucesso. 
+         </div>
+    
+         <h3>Alerta com opçao de fechamento - Elemento button</h3>
+         <div class="alert alert-success alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert"
+                  aria-hidden="true">×
+          </button>
+          <strong>Parabéns!</strong> Ação finalizada com sucesso. 
+         </div>
+        
+    </div>
+
+    <div class="container">
+ 
+        <h2>Bootstrap - Progress Bar</h2><br>
+         
+         <h3>Bootstrap - Progress Bar padrão</h3>
+         <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" style="width:95%">
+               <span class="sr-only">95% Complete</span>
+          </div>
+         </div>
+    
+         <h3>Bootstrap - Progress Bar com label de progressão</h3>
+         <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" style="width:95%">
+               <span>95% Complete</span>
+          </div>
+         </div>
+        
+    </div>
+
+    <div class="container">
+ 
+        <h2>Bootstrap - Progress Bar</h2><br>
+         
+         <h3>Bootstrap - Progress Bar - Classe .progress-bar-success</h3>
+         <div class="progress">
+          <div class="progress-bar progress-bar-success" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:95%">
+               <span>95% Success Complete</span>
+          </div>
+         </div><br>
+    
+         <h3>Bootstrap - Progress Bar - Classe .progress-bar-striped</h3>
+         <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:95%">
+               <span>95% Complete</span>
+          </div>
+         </div> <br>
+    
+         <h3>Bootstrap - Progress Bar - Classes .progress-bar-striped e .active</h3>
+         <div class="progress">
+          <div class="progress-bar progress-bar-success progress-bar-striped active" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:95%">
+               <span>95% Complete</span>
+          </div>
+         </div>
+        
+    </div>
+
+    <div class="container">
+ 
+        <h2>Bootstrap - Progress Bar</h2><br>
+         
+         <h3>Bootstrap - Progress Bar empilhada</h3>
+         <div class="progress">
+          <div class="progress-bar progress-bar-danger" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:25%">
+               <span>25% Perigo - Pouquíssima Energia</span>
+          </div>
+          <div class="progress-bar progress-bar-warning" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:25%">
+               <span>50% Atenção - Pouca Energia</span>
+          </div>
+          <div class="progress-bar progress-bar-info" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:25%">
+               <span>75% - Nível Estável de Energia </span>
+          </div>
+          <div class="progress-bar progress-bar-success" 
+               role="progressbar" aria-valuenow="95"
+               aria-valuemin="0" aria-valuemax="100" 
+               style="width:24%">
+               <span>95% Nível Seguro de Energia</span>
+          </div>
+         </div><br>
+        
+    </div>
+    
+  </body>
+</html>  
